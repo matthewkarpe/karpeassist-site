@@ -85,6 +85,31 @@
     details p{margin:8px 0 0;color:var(--muted)}
 
     .inline-help{font-size:13px;color:var(--muted)}
+  
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 16px rgba(37, 99, 235, 0.35); /* softer, wider glow */
+  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-links a:hover {
+  background: var(--accent2);
+  transform: scale(1.1);
+  box-shadow: 0 0 22px rgba(30, 64, 175, 0.45); /* softer hover glow */
+}
+
+.social-links img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
   </style>
 </head>
 
@@ -309,11 +334,27 @@
       </div>
     </section>
 
+    
+    
     <!-- Footer -->
     <div class="container foot">
-      <p>&copy; <span id="year"></span> KarpeAssist . Remote only . <a href="mailto:info@karpeassist.com">info@karpeassist.com</a></p>
-      <p class="muted">Last updated: Sep 22, 2025</p>
+      <p>&copy; <span id="year"></span> KarpeAssist . Remote only . 
+        <a href="mailto:info@karpeassist.com">info@karpeassist.com</a>
+      </p>
+      <p class="muted">Last updated: Sep 24, 2025</p>
+      <div class="social-links">
+        <p class="muted" style="margin:0 0 6px;text-align:center">Connect with me:</p>
+        <div style="display:flex;gap:14px;justify-content:center">
+          <a href="https://www.facebook.com/profile.php?id=61580942609816" target="_blank" aria-label="Facebook">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAADWUlEQVR4nJXWS2idVRAH8N+9SWhs0VhLHyCifRBUbBAE3Uh1qQWRaDELXWtRBCFYanGhFdGF4KoKbrroyp0uXKgoKtYHVGig2liNj9JaxVIL9VHR3uti5uQev9yb2x74OK85/5kzZ+Y/H8NbGyNoLSPTSpn2MLBhIG1cqNYmsRGrc/4bvsexSmYEHXQvRWGrOnA1HsYMVuR6OVfG5/E6XsNPfTCWbbVb9uAUDmIntqbS0lZgKvcOpuzuAVjLKlubAF9j+wC5UUs9dI9w78dYM0xpObwG83gbK6u9EhRlPKitwrv4Clc1sBcHrer7COdwV+6N4t8+wDdiG64RgXUaXwjPwDu4DHfkvKt602Lx0ziB8QE3Ke55Ab/gMN7CmziD9yvDV+KkiINaxyLIBpytbtZUVuZPJfitjf3HxTPAWPbbE3NDrasAPYfPGkaUVlw/gePYkfMr8DwOYAHvVecLxufYWxtdEnxehHdLvFu/223DzyIw2nhFuO3l/GYqA0sUP4qjDSNM4gfc1OeGLfGmY3hAMEuROY279W8FYyqxt9SLm0QEfZPzmiG6gkn+EdH7ZxqxCn+IXO3XCsaxHG+m57qJ7P9OIzp61LQRj6WCW7LvCjevxT78mGc+Fe9Z3rydxi7qKDfsx6ll7XrMikj7VvBlMW4ffhf5NoP7c2/EUh5t1Tc8m/14WlQb0MUhTDcA/sKT1fxA3rRW0EnMbtFRFC6kwBYcsfTGW/FSGrOA/YK4d2Jd4twrqkoxsjzJZI4XisIyOS/C/kv/r4PH8QauxQ0iWvcLN+5N+VOCcUoed/Tcentif6eR+M9iLseDGH6HIGV6JDA1QLZgzOGZHI+09R73VZEe05WFpY0mwHjDmBHBmc1yVar+NK5LbPqQd+HJicZ66R8UjFRueBK3DZC9MrF2NdbRo7c2PsAn1U1GL0FhIe2WKMIfVtgtFWipVR3ch8tT6Xq9Wjjor6z81RFstE4Q9oReKi3Wwhqgm/MzepE1h4fSkAsiyZvtXO510gOH8+ydiTX0Z6o2YlYU2qN4Ai+KPCXe6AQeEbVwPmVnB2At2+rEXy+q9hHBFodyfbUoVb/m3p6U7Ydx0UqbVX8zbs7xmAiYTQ2ZZf/SL8aKEmElqAbhtIfIgP8AkF/EmoBnpAMAAAAASUVORK5CYII=" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.linkedin.com/in/matthewkarpe/" target="_blank" aria-label="LinkedIn">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAACgklEQVR4nL3WO4xNURQG4O/cO5gYj8IzRIVGpZCQ6JQqiVIoJESiUBIqiUcUiFBpRKJQoEI0xKvxiEQmoUFIFF6RSDxG3LlXsdd2zlznTmbMjJXs7Jz9+P+11l5rnVUYKU1TI8N1i8UUkY3ALipzBxuxDwsmiegDjuF65uhDA+0gu4wzeBHrnX8kKgJzZWBuDtIG5bvdx/F/JBhNTgQ2NBuVjfl4Hgr011zsG+foD6xngY0wMaSNaVJE/cJuybW3sRqt2GuNYwwHZruOsFC6dxMOYz/u4hJmV86NRzrVO40eh+bGwTt4iGVKF1XdVnSt9cL7I31d362YzwfJXXyTouxjD4zupG7WrPUkzKYvlh77An4G6VJswIBk/TtcxTqswg/cw5teZHWE+XszTuEJZuFgjKOhyHSswCvMCIU6mINzOKCHe7sJswzgQWg/C4MB9hBr48xbKZj2K124AVfC2kN1wL0euaMMknkxt8OanKfr8RRnsTOwbmEL9mBRHcdoUdUJzbP2RWVtKIBPS+49LLm7gZv4FNbme2MirJN8uT+s2IGt2IbtkvuHYiydDMIs/dI7D0qVZBAzY2TJ8TEphPluUyqDY0r6iRJS/r7G/BsbjbCQNM/1tVNZ65VO1ZI3LsJCyqUW3sfcqKx9UpbBLC2p+rTiXC1pVdNqVf8uJf0jKTgW46uU9I+lVJitTJlhKUKfxt01uFhR/o/Lq4QNKZybuBYgA7H3Osi/BFGupe8C47OUGkvi/HncCKwhXZ6sthgn6twwQTkpFXVo9inNPSI1PG289Le720b2rbnq5KdoGvluLSzHLulnAJ26NnEvFk7Qqix/tYnVzf/aCGeZ8lb/Nxa7nn3Xb0SwAAAAAElFTkSuQmCC" alt="LinkedIn" class="social-icon">
+          </a>
+        </div>
+      </div>
     </div>
+
   </main>
 
   <script>
