@@ -41,11 +41,7 @@
     .container{max-width:1040px;margin:0 auto;padding:0 20px}
     .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:0.2px}
-
-    /* Updated logo block to embed the SVG at the same size and position */
-    .logo{width:24px;height:24px;border-radius:8px;display:inline-block;overflow:hidden}
-    .logo svg{width:100%;height:100%;display:block}
-
+    .logo{width:24px;height:24px;border-radius:8px;background:var(--accent)}
     nav a{color:var(--ink);opacity:0.9;text-decoration:none;padding:8px 10px;border-radius:8px}
     nav a:hover,nav a:focus{background:var(--surface);outline:none}
 
@@ -90,51 +86,37 @@
 
     .inline-help{font-size:13px;color:var(--muted)}
   
-    .social-links a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 16px rgba(37, 99, 235, 0.35);
-      transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-    }
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 16px rgba(37, 99, 235, 0.35); /* softer, wider glow */
+  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
 
-    .social-links a:hover {
-      background: var(--accent2);
-      transform: scale(1.1);
-      box-shadow: 0 0 22px rgba(30, 64, 175, 0.45);
-    }
+.social-links a:hover {
+  background: var(--accent2);
+  transform: scale(1.1);
+  box-shadow: 0 0 22px rgba(30, 64, 175, 0.45); /* softer hover glow */
+}
 
-    .social-links img {
-      width: 20px;
-      height: 20px;
-      filter: brightness(0) invert(1);
-    }
+.social-links img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
   </style>
 </head>
 
 <body>
   <header>
     <div class="container nav">
-      <div class="brand">
-        <span class="logo" aria-hidden="true">
-          <!-- Inline SVG logo at the exact same 24x24 size with 8px corner radius -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="KarpeAssist">
-            <!-- rounded square background using accent color -->
-            <rect x="0" y="0" width="24" height="24" rx="8" fill="var(--accent)"/>
-            <!-- circle -->
-            <circle cx="12" cy="12" r="7" fill="none" stroke="#fff" stroke-width="2.25"/>
-            <!-- check mark that pokes slightly outside the circle -->
-            <path d="M7.8 12.6 L10.6 15.4 L18.6 7.4"
-                  fill="none" stroke="#fff" stroke-width="2.25"
-                  stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-        <span>KarpeAssist</span>
-      </div>
+      <div class="brand"><span class="logo"></span> <span>KarpeAssist</span></div>
       <nav>
         <a href="#idea">Why this</a>
         <a href="#services">Services</a>
@@ -153,7 +135,9 @@
         <div>
           <div class="eyebrow">New model . Evening Ops</div>
           <h1>Your admin done tonight so tomorrow starts clean</h1>
-          <p class="lead">Send tasks in the evening (by 7 PM ET). Small tasks are often done the same evening, usually by late evening or overnight. If a request needs more time I confirm the timeline up front. Remote and email only. No calls to schedule, just fast evening turnaround.</p>
+          <p class="lead">Send tasks in the evening (by 7 PM ET). Small tasks are often done the same evening, usually by late evening or overnight. If a request needs more time I confirm the timeline up front. Remote only. Email only.</p>
+
+
 
           <!-- Single CTA in Hero: scroll to Contact -->
           <div class="cta-row">
@@ -165,6 +149,7 @@
             <span class="pill">Remote only</span>
             <span class="pill">Email first</span>
             <span class="pill">Often late evening or overnight for small tasks</span>
+       
             <span class="pill">$30/hr • 1 hour min • billed in full hours</span>
           </div>
         </div>
@@ -205,7 +190,8 @@
         <div class="section-title"><span class="dash"></span><h2 style="margin:0">Why this helps</h2></div>
         <ul class="list">
           <li><strong>Clear inbox by morning.</strong> Evening admin means you start fresh.</li>
-          <li><strong>Email first.</strong> Delegate quickly without scheduling delays.</li>
+         <li><strong>Email first.</strong> You can delegate quickly without needing to schedule calls.</li>
+
           <li><strong>Light and flexible.</strong> Small tasks turn around by late evening or overnight when possible.</li>
         </ul>
       </div>
@@ -253,6 +239,7 @@
         <ol class="list" style="margin:0">
           <li><strong>Email a task.</strong> Include any files/links and the format you want back.</li>
           <li><strong>Evening confirm.</strong> Tasks sent by 7 PM ET get a reply (Yes/No) by 8 PM ET.</li>
+
           <li><strong>Delivery.</strong> Small items are often delivered by late evening or overnight; larger ones get the next available evening.</li>
         </ol>
       </div>
@@ -260,65 +247,58 @@
 
     <!-- Rates -->
     <section id="rates">
-      <div class="container">
-        <div class="section-title"><span class="dash"></span><h2 style="margin:0">Rates</h2></div>
-        <p class="muted" style="max-width:70ch">
-          <strong>$30 per hour.</strong> <strong>1 hour minimum.</strong> All sessions are billed in full hours,
-          <strong>rounded up to the next full hour</strong>. Most small tasks finish within the first hour. For larger items,
-          I confirm scope and get approval before any additional billing.
-        </p>
-      </div>
-    </section>
+  <div class="container">
+    <div class="section-title">
+      <span class="dash"></span>
+      <h2 style="margin:0">Rates</h2>
+    </div>
+    <p class="muted" style="max-width:70ch">
+      <strong>$30 per hour</strong> with a <strong>1 hour minimum</strong>. 
+      Most small tasks finish within the first hour. 
+      If something looks like it will take longer, I confirm the scope and get your approval before continuing.
+    </p>
+  </div>
+</section>
 
-    <!-- FAQs -->
-    <section id="faqs">
-      <div class="container">
-        <div class="section-title"><span class="dash"></span><h2 style="margin:0">FAQs</h2></div>
-        <p class="muted">Short answers so you do not have to ask twice.</p>
 
-        <details>
-          <summary>When will I hear back after sending a task?</summary>
-          <p>Sunday through Thursday, I confirm all new requests in the evening:</p>
-          <ul class="list">
-            <li>Tasks sent by <strong>7 PM ET</strong> get a reply (Yes/No) by <strong>8 PM ET</strong>.</li>
-          </ul>
-        </details>
+   <!-- FAQs -->
+<section id="faqs">
+  <div class="container">
+    <div class="section-title"><span class="dash"></span><h2 style="margin:0">FAQs</h2></div>
+    <p class="muted">Straightforward answers so you know what to expect.</p>
 
-        <details>
-          <summary>Can I send any size task and expect it back the same evening?</summary>
-          <p>Smaller requests are often completed by late evening or overnight. Larger items may need more time. I always confirm scope and give you a delivery estimate before I begin.</p>
-        </details>
+    <details>
+      <summary>When will I hear back after sending a task?</summary>
+      <p>Sunday through Thursday, tasks sent by <strong>7 PM ET</strong> always get a reply by <strong>8 PM ET</strong>.</p>
+    </details>
 
-        <details>
-          <summary>How do billing and rates work?</summary>
-          <p>
-            <strong>$30/hr</strong> remote. <strong>1 hour minimum</strong>.
-            <strong>All sessions are billed in full hours, rounded up to the next full hour.</strong><br><br>
-            <strong>Intro offer:</strong> Your first two sessions are capped at 1 hour each, so you can try the service at a simple flat rate.
-          </p>
-        </details>
+    <details>
+      <summary>Can I send any size task and expect it back the same evening?</summary>
+      <p>Smaller requests are often completed by late evening or overnight. Larger ones may take more time, and I confirm the scope and delivery estimate before starting.</p>
+    </details>
 
-        <details>
-          <summary>How do I pay?</summary>
-          <p><strong>Stripe invoice</strong> preferred; <strong>PayPal</strong> available.</p>
-        </details>
+    <details>
+      <summary>How do billing and rates work?</summary>
+      <p><strong>$30 per hour</strong> with a <strong>1 hour minimum</strong>. Most small tasks finish within the first hour. If something will take longer, I confirm with you before continuing. Your first two sessions are capped at 1 hour each so you can try the service at a flat rate.</p>
+    </details>
 
-        <details>
-          <summary>What if you are unavailable?</summary>
-          <p>I do not take tasks on Friday or Saturday. If I cannot accept a task on a Sunday through Thursday evening, I will confirm the next available evening during my reply.</p>
-        </details>
+    <details>
+      <summary>How do I pay?</summary>
+      <p>Secure <strong>Stripe invoice</strong> (preferred) or <strong>PayPal</strong>.</p>
+    </details>
 
-        <details>
-          <summary>Do you take meetings or calls?</summary>
-          <p>No calls or meetings. I am email first so you can fire off tasks quickly and get results without scheduling.</p>
-        </details>
+    <details>
+      <summary>What if you are unavailable?</summary>
+      <p>I work Sunday through Thursday evenings. If I cannot take a task that night, I will let you know the next available evening.</p>
+    </details>
 
-        <details>
-          <summary>Is this remote only?</summary>
-          <p>Yes. Remote only. No in-person errands or printer setup.</p>
-        </details>
-      </div>
-    </section>
+    <details>
+      <summary>How do we communicate?</summary>
+      <p>Email only, fully remote. This keeps things simple and fast.</p>
+    </details>
+  </div>
+</section>
+
 
     <!-- Contact -->
     <section id="contact">
@@ -327,6 +307,7 @@
           <div>
             <h2 style="margin:0 0 6px">Get started</h2>
             <p class="muted" style="margin:0">Evening ops (Sun-Thu). Tasks sent by <strong>7 PM ET</strong> get a reply (Yes/No) by <strong>8 PM ET</strong>.</p>
+
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
             <a class="btn primary"
@@ -345,12 +326,14 @@
       </div>
     </section>
 
+    
+    
     <!-- Footer -->
     <div class="container foot">
       <p>&copy; <span id="year"></span> KarpeAssist . Remote only . 
         <a href="mailto:info@karpeassist.com">info@karpeassist.com</a>
       </p>
-      <p class="muted">Last updated: Oct 10, 2025</p>
+      <p class="muted">Last updated: Sep 24, 2025</p>
       <div class="social-links">
         <p class="muted" style="margin:0 0 6px;text-align:center">Connect with me:</p>
         <div style="display:flex;gap:14px;justify-content:center">
@@ -423,6 +406,7 @@ Thanks!`;
       "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
       "opens": "18:00",
       "closes": "02:00"
+
     }
   ],
   "contactPoint": [
