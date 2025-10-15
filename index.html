@@ -1,3 +1,4 @@
+
 <!-- DEPLOY TEST: build 2025-10-13T00:05Z (Full Dark Mode + Restored Contact Section) -->
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +30,18 @@
   <meta name="twitter:title" content="KarpeAssist | Remote Admin & Tech Support (Raleigh & Remote)" />
   <meta name="twitter:description" content="Affordable remote admin support, data entry, and HIPAA-aware tech help. $30/hr with fast evening turnaround. Serving Raleigh and remote clients." />
   <meta name="twitter:image" content="https://karpeassist.com/og.v3.png?v=1" />
+<!-- Theming for browser UI -->
+<meta name="theme-color" content="#0b1220">
+
+<!-- Extra Open Graph context -->
+<meta property="og:site_name" content="KarpeAssist">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="KarpeAssist checkmark logo in a blue rounded square">
+
+<!-- Twitter extras (optional; remove twitter:site if you don’t have a handle) -->
+<meta name="twitter:image:alt" content="KarpeAssist checkmark logo in a blue rounded square">
+<!-- <meta name="twitter:site" content="@YourHandle"> -->
+
 
   <style>
     :root {
@@ -68,7 +81,7 @@
     .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:0.2px;color:#fff}
     .logo{width:24px;height:24px;border-radius:8px;display:inline-block;overflow:hidden}
-    .logo svg{width:100%;height:100%;display:block}
+    
     .logo img{
       width:100%;
       height:100%;
@@ -136,7 +149,8 @@
     <div class="container nav">
       <div class="brand">
         <span class="logo" aria-hidden="true">
-          <img src="/logotrimmed3.png?v=2" alt="KarpeAssist logo" width="24" height="24">
+          <img src="https://karpeassist.com/logotrimmed3.png?v=2" alt="KarpeAssist logo" width="24" height="24">
+
         </span>
         <span>KarpeAssist</span>
       </div>
@@ -202,44 +216,70 @@
 
     <div class="container foot"><p>&copy; <span id="year"></span> KarpeAssist · Remote only · <a href="mailto:info@karpeassist.com">info@karpeassist.com</a></p><p class="muted">Last updated: Oct 15, 2025</p><div class="social-links"><p class="muted" style="margin:0 0 6px;">Connect with me:</p><div style="display:flex;gap:14px;justify-content:center"><a href="https://www.facebook.com/profile.php?id=61580942609816" target="_blank" aria-label="Facebook"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a><a href="https://www.linkedin.com/in/matthewkarpe/" target="_blank" aria-label="LinkedIn"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn"></a></div></div></div>
   </main>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const toggleBtn=document.getElementById('menuToggle');
-    const siteNav=document.getElementById('site-nav');
-    toggleBtn?.addEventListener('click',()=>{const open=siteNav.classList.toggle('open');toggleBtn.setAttribute('aria-expanded',String(open));});
-    const template=`To: info@karpeassist.com\nSubject: KarpeAssist - New task\n\nHi Matthew,\n\nTask summary: _____\nFiles or links: _____\nDeadline (when you’d like this back): _____\nAny rules or formatting notes: _____\n\nThanks!`;
-    function copyTemplate(){
-      if(navigator.clipboard){navigator.clipboard.writeText(template).then(()=>alert('Template copied. Paste into Gmail or Outlook web.'))}
-      else{const ta=document.createElement('textarea');ta.value=template;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);alert('Template copied. Paste into Gmail or Outlook web.')}
-    }
-    document.getElementById('copyTemplateBtn2')?.addEventListener('click',copyTemplate);
-  </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "KarpeAssist",
-    "url": "https://karpeassist.com/",
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "KarpeAssist",
+  "url": "https://karpeassist.com/",
+  "email": "info@karpeassist.com",
+  "image": "https://karpeassist.com/og.v3.png?v=1",
+  "logo": "https://karpeassist.com/logotrimmed3.png?v=2",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61580942609816",
+    "https://www.linkedin.com/in/matthewkarpe/",
+    "https://www.voices.com/profile/matthewkarpevo"
+  ],
+  "areaServed": { "@type": "City", "name": "Raleigh" },
+  "description": "Affordable remote admin support, data entry, and HIPAA-aware tech help. $30/hr with fast evening turnaround. Serving Raleigh and remote clients.",
+  "paymentAccepted": ["Card", "ACH", "PayPal"],
+  "priceRange": "$$",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
+    "opens": "18:00",
+    "closes": "02:00"
+  }],
+  "contactPoint": [{
+    "@type": "ContactPoint",
     "email": "info@karpeassist.com",
-    "areaServed": { "@type": "City", "name": "Raleigh" },
-    "description": "Affordable remote admin support, data entry, and HIPAA-aware tech help. $30/hr with fast evening turnaround. Serving Raleigh and remote clients.",
-    "paymentAccepted": ["Card", "ACH", "PayPal"],
-    "priceRange": "$$",
-    "openingHoursSpecification": [{
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
-      "opens": "18:00","closes": "02:00"
-    }],
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "email": "info@karpeassist.com",
-      "contactType": "customer support",
-      "areaServed": "US",
-      "availableLanguage": "English"
-    }],
-    "sameAs": ["https://www.voices.com/profile/matthewkarpevo"]
+    "contactType": "customer support",
+    "areaServed": "US",
+    "availableLanguage": "English"
+  }]
+}
+</script>
+<script>
+document.getElementById('year')?.textContent = new Date().getFullYear();
+const toggleBtn = document.getElementById('menuToggle');
+const siteNav = document.getElementById('site-nav');
+toggleBtn?.addEventListener('click', () => {
+  const open = siteNav.classList.toggle('open');
+  toggleBtn.setAttribute('aria-expanded', String(open));
+});
+const template = `To: info@karpeassist.com
+Subject: KarpeAssist - New task
+
+Hi Matthew,
+
+Task summary: _____
+Files or links: _____
+Deadline (when you’d like this back): _____
+Any rules or formatting notes: _____
+
+Thanks!`;
+function copyTemplate(){
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(template).then(()=>alert('Template copied. Paste into Gmail or Outlook web.'));
+  }else{
+    const ta=document.createElement('textarea');ta.value=template;document.body.appendChild(ta);
+    ta.select();document.execCommand('copy');document.body.removeChild(ta);
+    alert('Template copied. Paste into Gmail or Outlook web.');
   }
-  </script>
+}
+document.getElementById('copyTemplateBtn2')?.addEventListener('click', copyTemplate);
+</script>
+
 </body>
 </html>
 
