@@ -1,22 +1,20 @@
-<!-- DEPLOY TEST: build 2025-10-13T00:05Z (Full Dark Mode + Restored Contact Section) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="color-scheme" content="dark light">
-
   <meta name="google-site-verification" content="w9Y6DplXW2FhfglHsTrdaVME0niWI5XjfmQ1Tb0bUms" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>KarpeAssist | Remote Admin & Tech Support (Raleigh & Remote)</title>
   <meta name="description" content="Affordable remote admin support, data entry, and HIPAA-aware tech help. $30/hr with fast evening turnaround. Serving Raleigh and remote clients." />
 
-  <!-- Favicons -->
+  <!-- Favicons (versioned to bust cache; no .ico) -->
   <link rel="icon" type="image/svg+xml" href="/icon.v3.svg?v=1" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.v3.png?v=1" />
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.v3.png?v=1" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.v3.png?v=1" />
 
-  <!-- Open Graph -->
+  <!-- Social preview -->
   <meta property="og:url" content="https://karpeassist.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="KarpeAssist | Remote Admin & Tech Support (Raleigh & Remote)" />
@@ -24,125 +22,102 @@
   <meta property="og:image" content="https://karpeassist.com/og.v3.png?v=1" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="KarpeAssist | Remote Admin & Tech Support (Raleigh & Remote)" />
   <meta name="twitter:description" content="Affordable remote admin support, data entry, and HIPAA-aware tech help. $30/hr with fast evening turnaround. Serving Raleigh and remote clients." />
   <meta name="twitter:image" content="https://karpeassist.com/og.v3.png?v=1" />
 
   <style>
-    :root {
-      --bg:#0b1220;
-      --ink:#ffffff;
-      --muted:#cbd5e1;
-      --line:#1e293b;
-      --surface:#1e293b;
-      --panel:#162032;
-      --accent:#2563eb;
-      --accent2:#3b82f6;
-      --radius:14px;
-      --shadow:0 4px 16px rgba(0,0,0,0.4);
+   :root {
+      --bg:#ffffff; --ink:#0b1220; --muted:#475569; --line:#e5e7eb; --surface:#f8fafc; --panel:#f1f5f9;
+      --accent:#2563eb; --accent2:#1e40af; --radius:14px; --shadow:0 4px 16px rgba(2,6,23,0.06);
     }
-	html, body {
-  background-color: #0b1220 !important;
-  color: #ffffff !important;
-}
-
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{
-      margin:0;
-      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
-      color:var(--ink);
-      background:var(--bg);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-    header{
-      position:sticky;top:0;z-index:40;
-      background:rgba(11,18,32,0.85);
-      backdrop-filter:saturate(1.1) blur(8px);
-      border-bottom:1px solid var(--line);
-    }
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,0.8);backdrop-filter:saturate(1.1) blur(8px);border-bottom:1px solid var(--line)}
     .container{max-width:1040px;margin:0 auto;padding:0 20px}
     .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:0.2px;color:#fff}
-    .logo{width:24px;height:24px;border-radius:8px;display:inline-block;overflow:hidden}
-    .logo svg{width:100%;height:100%;display:block}
-    nav a{color:#fff;opacity:0.9;text-decoration:none;padding:8px 10px;border-radius:8px}
-    nav a:hover,nav a:focus{background:var(--panel);outline:none}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:0.2px}
+    .logo{width:24px;height:24px;border-radius:8px;background:var(--accent)}
+    nav a{color:var(--ink);opacity:0.9;text-decoration:none;padding:8px 10px;border-radius:8px}
+    nav a:hover,nav a:focus{background:var(--surface);outline:none}
+
     main section{padding:28px 0}
     .hero{padding:56px 0 28px}
     .hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:26px;align-items:center}
     @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
-    h1{font-size:clamp(32px,5vw,48px);line-height:1.08;margin:0 0 10px;color:#fff}
+
+    h1{font-size:clamp(32px,5vw,48px);line-height:1.08;margin:0 0 10px}
     .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:0.12em;display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--muted);margin-bottom:8px}
     .lead{color:var(--muted);font-size:clamp(16px,2.2vw,18px);max-width:60ch}
-    .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);color:#fff}
+
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
     .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 1px 2px rgba(2,6,23,0.3)}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:700;text-decoration:none;box-shadow:0 1px 2px rgba(2,6,23,0.04)}
     .btn:hover{transform:translateY(-1px)}
     .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
     .btn.block{padding:12px 18px;font-size:16px}
+
     .grid{display:grid;gap:16px;grid-template-columns:repeat(3, 1fr)}
     @media (max-width:900px){.grid{grid-template-columns:1fr}}
+
     .pillrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--muted);font-size:12px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font-size:12px}
+
     .section-title{display:flex;align-items:center;gap:10px;margin:0 0 8px}
     .dash{width:22px;height:2px;background:var(--accent);border-radius:2px;opacity:0.9}
+
     .list{margin:8px 0 0;padding:0 0 0 18px}
     .muted{color:var(--muted)}
-    .foot{margin-top:28px;padding:24px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;text-align:center}
+    .foot{margin-top:28px;padding:24px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
     .check{list-style:none;margin:4px 0 0;padding:0}
     .check li{position:relative;padding-left:22px;margin:4px 0}
     .check li::before{content:"✓";position:absolute;left:0;top:0;line-height:1.1;color:var(--accent);font-weight:700}
-    details{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow);padding:14px;margin-bottom:10px;color:#fff}
+
+    details{border:1px solid var(--line);border-radius:var(--radius);background:#fff;box-shadow:var(--shadow);padding:14px;margin-bottom:10px}
     details summary{cursor:pointer;font-weight:700;list-style:none}
     details summary::-webkit-details-marker{display:none}
     details p{margin:8px 0 0;color:var(--muted)}
+
     .inline-help{font-size:13px;color:var(--muted)}
-    .social-links a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px rgba(37,99,235,0.35);transition:transform 0.2s ease,opacity 0.2s ease,background 0.2s ease,box-shadow 0.2s ease;}
-    .social-links a:hover{background:var(--accent2);transform:scale(1.1);box-shadow:0 0 22px rgba(30,64,175,0.45);}
-    .social-links img {
-  width: 20px;
-  height: 20px;
-  filter: none;
-}
+  
 .social-links a {
-  background: #fff;
-}
-.social-links a:hover {
-  background: var(--accent2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 16px rgba(37, 99, 235, 0.35); /* softer, wider glow */
+  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
-    @media (max-width:900px){.menu-toggle{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:#fff;}
-      .menu-toggle svg{width:20px;height:20px}
-      nav#site-nav{position:absolute;left:0;right:0;top:64px;background:var(--panel);border-bottom:1px solid var(--line);box-shadow:var(--shadow);display:none;flex-direction:column;gap:6px;padding:10px 20px;}
-      nav#site-nav.open{display:flex}
-      .nav{gap:10px}}
-    @media (min-width:901px){.menu-toggle{display:none}}
+.social-links a:hover {
+  background: var(--accent2);
+  transform: scale(1.1);
+  box-shadow: 0 0 22px rgba(30, 64, 175, 0.45); /* softer hover glow */
+}
+
+.social-links img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
   </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
-      <div class="brand">
-        <span class="logo" aria-hidden="true">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="KarpeAssist">
-            <rect x="0" y="0" width="24" height="24" rx="8" fill="var(--accent)"/>
-            <circle cx="12" cy="12" r="7" fill="none" stroke="#fff" stroke-width="2.25"/>
-            <path d="M7.8 12.6 L10.6 15.4 L18.6 7.4" fill="none" stroke="#fff" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-        <span>KarpeAssist</span>
-      </div>
-      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Menu</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <nav id="site-nav">
+      <div class="brand"><span class="logo"></span> <span>KarpeAssist</span></div>
+      <nav>
         <a href="#idea">Why this</a>
         <a href="#services">Services</a>
         <a href="#flow">How it works</a>
@@ -152,89 +127,299 @@
       </nav>
     </div>
   </header>
+
   <main id="main">
+    <!-- Hero -->
     <section class="hero">
       <div class="container wrap">
         <div>
-          <div class="eyebrow">New model · Evening Ops</div>
+          <div class="eyebrow">New model . Evening Ops</div>
           <h1>Your admin done tonight so tomorrow starts clean</h1>
-          <p class="lead">Send tasks in the evening (by 7 PM ET). Small tasks are often done the same evening, usually by late evening or overnight. If a request needs more time I confirm the timeline up front. Remote and email only. No calls to schedule, just fast evening turnaround.</p>
+          <p class="lead">Send tasks in the evening (by 7 PM ET). Small tasks are often done the same evening, usually by late evening or overnight. If a request needs more time I confirm the timeline up front. Remote only. Email only.</p>
+
+
+
+          <!-- Single CTA in Hero: scroll to Contact -->
           <div class="cta-row">
             <a class="btn primary block" href="#contact">Send a task</a>
             <a class="btn" href="#idea">See why this helps</a>
           </div>
+
           <div class="pillrow">
             <span class="pill">Remote only</span>
             <span class="pill">Email first</span>
             <span class="pill">Often late evening or overnight for small tasks</span>
-            <span class="pill">$30/hr · 1 hour min · billed in full hours</span>
+       
+            <span class="pill">$30/hr • 1 hour min • billed in full hours</span>
           </div>
         </div>
+
         <div class="card">
           <h2>Hand this off tonight</h2>
           <ul class="list">
-            <li><strong>Admin</strong><ul class="check"><li>Inbox tidy</li><li>Scheduling coordination</li><li>Message handling</li><li>Document prep</li></ul></li>
-            <li><strong>Data entry</strong><ul class="check"><li>Forms and spreadsheets clean up</li><li>Validation lists and data entry</li><li>Quick quality checks for errors and consistency</li></ul></li>
-            <li><strong>Customer support</strong><ul class="check"><li>Friendly replies and reminders that reduce follow up</li><li>Voicemail → email summaries (audio to short notes)</li><li><em>Optional add-on:</em> draft short Q&A from your notes</li></ul></li>
+            <li><strong>Admin</strong>
+              <ul class="check">
+                <li>Inbox tidy</li>
+                <li>Scheduling coordination</li>
+                <li>Message handling</li>
+                <li>Document prep</li>
+              </ul>
+            </li>
+            <li><strong>Data entry</strong>
+              <ul class="check">
+                <li>Forms and spreadsheets clean up</li>
+                <li>Validation lists and data entry</li>
+                <li>Quick quality checks for errors and consistency</li>
+              </ul>
+            </li>
+            <li><strong>Customer support</strong>
+              <ul class="check">
+                <li>Friendly replies and reminders that reduce follow up</li>
+                <li>Voicemail -> email summaries (audio to short notes)</li>
+                <li><em>Optional add-on:</em> draft short Q&A from your notes</li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
     </section>
-    <section id="idea"><div class="container"><div class="section-title"><span class="dash"></span><h2>Why this helps</h2></div><ul class="list"><li><strong>Clear inbox by morning.</strong> Evening admin means you start fresh.</li><li><strong>Email first.</strong> Delegate quickly without scheduling delays.</li><li><strong>Light and flexible.</strong> Small tasks turn around by late evening or overnight when possible.</li></ul></div></section>
-    <section id="services"><div class="container"><h2>What you can hand off</h2><div class="grid"><div class="card"><h3>Admin that removes friction</h3><ul class="list"><li>Inbox tidy so important mail is easy to see</li><li>Scheduling confirmations so calendars match</li><li>Message handling that keeps customers informed</li><li>Document prep so files are named and findable</li></ul></div><div class="card"><h3>Data that is ready to use</h3><ul class="list"><li>Clean and standardize spreadsheets and forms</li><li>Validation lists and data entry</li><li>Move data between files while keeping formats consistent</li><li>Quick quality checks that catch errors and keep data consistent</li></ul></div><div class="card"><h3>Customer support</h3><ul class="list"><li>Friendly replies and reminders that reduce follow up</li><li>Voicemail → email summaries (audio to short notes)</li><li><em>Optional add-on:</em> draft short Q&A from your notes</li></ul></div></div></div></section>
-    <section id="flow"><div class="container"><div class="section-title"><span class="dash"></span><h2>How it works</h2></div><ol class="list"><li><strong>Email a task.</strong> Include any files/links and the format you want back.</li><li><strong>Evening confirm.</strong> Tasks sent by 7 PM ET get a reply (Yes/No) by 8 PM ET.</li><li><strong>Delivery.</strong> Small items are often delivered by late evening or overnight; larger ones get the next available evening.</li></ol></div></section>
-    <section id="rates"><div class="container"><div class="section-title"><span class="dash"></span><h2>Rates</h2></div><p class="muted"><strong>$30 per hour.</strong> <strong>1 hour minimum.</strong> All sessions are billed in full hours, <strong>rounded up to the next full hour</strong>. Most small tasks finish within the first hour. For larger items, I confirm scope and get approval before any additional billing.</p></div></section>
-    <section id="faqs"><div class="container"><div class="section-title"><span class="dash"></span><h2>FAQs</h2></div><p class="muted">Short answers so you do not have to ask twice.</p><details><summary>When will I hear back after sending a task?</summary><p>Sunday–Thursday, I confirm all new requests in the evening. Tasks sent by <strong>7 PM ET</strong> get a reply (Yes/No) by <strong>8 PM ET</strong>.</p></details><details><summary>Can I send any size task and expect it back the same evening?</summary><p>Smaller requests are often completed by late evening or overnight. Larger items may need more time. I always confirm scope and give you a delivery estimate before I begin.</p></details><details><summary>How do billing and rates work?</summary><p>
-            <strong>$30/hr</strong> remote. <strong>1 hour minimum</strong>.
-            <strong>All sessions are billed in full hours, rounded up to the next full hour.</strong><br><br>
-            <strong>Intro offer:</strong> Your first two sessions are capped at 1 hour each, so you can try the service at a simple flat rate.
-          </p>
-</details><details><summary>How do I pay?</summary><p><strong>Stripe invoice</strong> preferred; <strong>PayPal</strong> available.</p></details><details><summary>What if you are unavailable?</summary> <p>I do not take tasks on Friday or Saturday. If I cannot accept a task on a Sunday through Thursday evening, I will confirm the next available evening during my reply.</p>
-</details><details><summary>Do you take meetings or calls?</summary><p>No calls or meetings. I am email first so you can fire off tasks quickly and get results without scheduling.</p>
-</details><details><summary>Is this remote only?</summary><p>Yes, remote only. No in-person errands or printer setup.</p></details></div></section>
+
+    <!-- Why this helps -->
+    <section id="idea">
+      <div class="container">
+        <div class="section-title"><span class="dash"></span><h2 style="margin:0">Why this helps</h2></div>
+        <ul class="list">
+          <li><strong>Clear inbox by morning.</strong> Evening admin means you start fresh.</li>
+         <li><strong>Email first.</strong> You can delegate quickly without needing to schedule calls.</li>
+
+          <li><strong>Light and flexible.</strong> Small tasks turn around by late evening or overnight when possible.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <h2>What you can hand off</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Admin that removes friction</h3>
+            <ul class="list">
+              <li>Inbox tidy so important mail is easy to see</li>
+              <li>Scheduling confirmations so calendars match</li>
+              <li>Message handling that keeps customers informed</li>
+              <li>Document prep so files are named and findable</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Data that is ready to use</h3>
+            <ul class="list">
+              <li>Clean and standardize spreadsheets and forms</li>
+              <li>Validation lists and data entry</li>
+              <li>Move data between files while keeping formats consistent</li>
+              <li>Quick quality checks that catch errors and keep data consistent</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Customer support</h3>
+            <ul class="list">
+              <li>Friendly replies and reminders that reduce follow up</li>
+              <li>Voicemail -> email summaries (audio to short notes)</li>
+              <li><em>Optional add-on:</em> draft short Q&A from your notes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="flow">
+      <div class="container">
+        <div class="section-title"><span class="dash"></span><h2 style="margin:0">How it works</h2></div>
+        <ol class="list" style="margin:0">
+          <li><strong>Email a task.</strong> Include any files/links and the format you want back.</li>
+          <li><strong>Evening confirm.</strong> Tasks sent by 7 PM ET get a reply (Yes/No) by 8 PM ET.</li>
+
+          <li><strong>Delivery.</strong> Small items are often delivered by late evening or overnight; larger ones get the next available evening.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Rates -->
+    <section id="rates">
+  <div class="container">
+    <div class="section-title">
+      <span class="dash"></span>
+      <h2 style="margin:0">Rates</h2>
+    </div>
+    <p class="muted" style="max-width:70ch">
+      <strong>$30 per hour</strong> with a <strong>1 hour minimum</strong>. 
+      Most small tasks finish within the first hour. 
+      If something looks like it will take longer, I confirm the scope and get your approval before continuing.
+    </p>
+  </div>
+</section>
+
+
+   <!-- FAQs -->
+<section id="faqs">
+  <div class="container">
+    <div class="section-title"><span class="dash"></span><h2 style="margin:0">FAQs</h2></div>
+    <p class="muted">Straightforward answers so you know what to expect.</p>
+
+    <details>
+      <summary>When will I hear back after sending a task?</summary>
+      <p>Sunday through Thursday, tasks sent by <strong>7 PM ET</strong> always get a reply by <strong>8 PM ET</strong>.</p>
+    </details>
+
+    <details>
+      <summary>Can I send any size task and expect it back the same evening?</summary>
+      <p>Smaller requests are often completed by late evening or overnight. Larger ones may take more time, and I confirm the scope and delivery estimate before starting.</p>
+    </details>
+
+    <details>
+      <summary>How do billing and rates work?</summary>
+      <p><strong>$30 per hour</strong> with a <strong>1 hour minimum</strong>. Most small tasks finish within the first hour. If something will take longer, I confirm with you before continuing. Your first two sessions are capped at 1 hour each so you can try the service at a flat rate.</p>
+    </details>
+
+    <details>
+      <summary>How do I pay?</summary>
+      <p>Secure <strong>Stripe invoice</strong> (preferred) or <strong>PayPal</strong>.</p>
+    </details>
+
+    <details>
+      <summary>What if you are unavailable?</summary>
+      <p>I work Sunday through Thursday evenings. If I cannot take a task that night, I will let you know the next available evening.</p>
+    </details>
+
+    <details>
+      <summary>How do we communicate?</summary>
+      <p>Email only, fully remote. This keeps things simple and fast.</p>
+    </details>
+  </div>
+</section>
+
 
     <!-- Contact -->
-    <section id="contact"><div class="container"><div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap"><div><h2 style="margin:0 0 6px">Get started</h2><p class="muted" style="margin:0">Evening ops (Sun–Thu). Tasks sent by <strong>7 PM ET</strong> get a reply (Yes/No) by <strong>8 PM ET</strong>.</p></div><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center"><a class="btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@karpeassist.com&su=KarpeAssist%20-%20First%20session%20request&body=Hi%20Matthew,%0A%0ATask(s):%20_____%0ADeadline%20or%20evening:%20_____%0AFiles%20or%20links:%20_____%0AAny%20rules%20or%20format%20notes:%20_____%0A%0AThanks!" target="_blank" rel="noopener">Email via Gmail</a><a class="btn" href="https://outlook.live.com/mail/0/deeplink/compose?to=info@karpeassist.com&subject=KarpeAssist%20-%20First%20session%20request&body=Hi%20Matthew,%0A%0ATask(s):%20_____%0ADeadline%20or%20evening:%20_____%0AFiles%20or%20links:%20_____%0AAny%20rules%20or%20format%20notes:%20_____%0A%0AThanks!" target="_blank" rel="noopener">Email via Outlook</a><a class="btn" href="https://compose.mail.yahoo.com/?to=info@karpeassist.com&subject=KarpeAssist%20-%20First%20session%20request&body=Hi%20Matthew,%0A%0ATask(s):%20_____%0ADeadline%20or%20evening:%20_____%0AFiles%20or%20links:%20_____%0AAny%20rules%20or%20format%20notes:%20_____%0A%0AThanks!" target="_blank" rel="noopener">Email via Yahoo</a><button class="btn" id="copyTemplateBtn2" type="button">Copy task template</button><span class="inline-help">or email <strong>info@karpeassist.com</strong></span></div></div></div></section>
+    <section id="contact">
+      <div class="container">
+        <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+          <div>
+            <h2 style="margin:0 0 6px">Get started</h2>
+            <p class="muted" style="margin:0">Evening ops (Sun-Thu). Tasks sent by <strong>7 PM ET</strong> get a reply (Yes/No) by <strong>8 PM ET</strong>.</p>
 
-    <div class="container foot"><p>&copy; <span id="year"></span> KarpeAssist · Remote only · <a href="mailto:info@karpeassist.com">info@karpeassist.com</a></p><p class="muted">Last updated: Oct 12, 2025</p><div class="social-links"><p class="muted" style="margin:0 0 6px;">Connect with me:</p><div style="display:flex;gap:14px;justify-content:center"><a href="https://www.facebook.com/profile.php?id=61580942609816" target="_blank" aria-label="Facebook"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a><a href="https://www.linkedin.com/in/matthewkarpe/" target="_blank" aria-label="LinkedIn"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn"></a></div></div></div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <a class="btn primary"
+               href="https://mail.google.com/mail/?view=cm&fs=1&to=info@karpeassist.com&su=KarpeAssist%20-%20First%20session%20request&body=Hi%20Matthew,%0A%0ATask(s):%20_____%0ADeadline%20or%20evening:%20_____%0AFiles%20or%20links:%20_____%0AAny%20rules%20or%20format%20notes:%20_____%0A%0AThanks!"
+               target="_blank" rel="noopener">Email via Gmail</a>
+            <a class="btn"
+               href="https://outlook.live.com/mail/0/deeplink/compose?to=info@karpeassist.com&subject=KarpeAssist%20-%20First%20session%20request&body=Hi%20Matthew,%0A%0ATask(s):%20_____%0ADeadline%20or%20evening:%20_____%0AFiles%20or%20links:%20_____%0AAny%20rules%20or%20format%20notes:%20_____%0A%0AThanks!"
+               target="_blank" rel="noopener">Email via Outlook</a>
+            <a class="btn"
+               href="https://compose.mail.yahoo.com/?to=info@karpeassist.com&subject=KarpeAssist%20-%20First%20session%20request&body=Hi%20Matthew,%0A%0ATask(s):%20_____%0ADeadline%20or%20evening:%20_____%0AFiles%20or%20links:%20_____%0AAny%20rules%20or%20format%20notes:%20_____%0A%0AThanks!"
+               target="_blank" rel="noopener">Email via Yahoo</a>
+            <button class="btn" id="copyTemplateBtn2" type="button">Copy task template</button>
+            <span class="inline-help">or email <strong>info@karpeassist.com</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    
+    <!-- Footer -->
+    <div class="container foot">
+      <p>&copy; <span id="year"></span> KarpeAssist . Remote only . 
+        <a href="mailto:info@karpeassist.com">info@karpeassist.com</a>
+      </p>
+      <p class="muted">Last updated: Sep 24, 2025</p>
+      <div class="social-links">
+        <p class="muted" style="margin:0 0 6px;text-align:center">Connect with me:</p>
+        <div style="display:flex;gap:14px;justify-content:center">
+          <a href="https://www.facebook.com/profile.php?id=61580942609816" target="_blank" aria-label="Facebook">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAADWUlEQVR4nJXWS2idVRAH8N+9SWhs0VhLHyCifRBUbBAE3Uh1qQWRaDELXWtRBCFYanGhFdGF4KoKbrroyp0uXKgoKtYHVGig2liNj9JaxVIL9VHR3uti5uQev9yb2x74OK85/5kzZ+Y/H8NbGyNoLSPTSpn2MLBhIG1cqNYmsRGrc/4bvsexSmYEHXQvRWGrOnA1HsYMVuR6OVfG5/E6XsNPfTCWbbVb9uAUDmIntqbS0lZgKvcOpuzuAVjLKlubAF9j+wC5UUs9dI9w78dYM0xpObwG83gbK6u9EhRlPKitwrv4Clc1sBcHrer7COdwV+6N4t8+wDdiG64RgXUaXwjPwDu4DHfkvKt602Lx0ziB8QE3Ke55Ab/gMN7CmziD9yvDV+KkiINaxyLIBpytbtZUVuZPJfitjf3HxTPAWPbbE3NDrasAPYfPGkaUVlw/gePYkfMr8DwOYAHvVecLxufYWxtdEnxehHdLvFu/223DzyIw2nhFuO3l/GYqA0sUP4qjDSNM4gfc1OeGLfGmY3hAMEuROY279W8FYyqxt9SLm0QEfZPzmiG6gkn+EdH7ZxqxCn+IXO3XCsaxHG+m57qJ7P9OIzp61LQRj6WCW7LvCjevxT78mGc+Fe9Z3rydxi7qKDfsx6ll7XrMikj7VvBlMW4ffhf5NoP7c2/EUh5t1Tc8m/14WlQb0MUhTDcA/sKT1fxA3rRW0EnMbtFRFC6kwBYcsfTGW/FSGrOA/YK4d2Jd4twrqkoxsjzJZI4XisIyOS/C/kv/r4PH8QauxQ0iWvcLN+5N+VOCcUoed/Tcentif6eR+M9iLseDGH6HIGV6JDA1QLZgzOGZHI+09R73VZEe05WFpY0mwHjDmBHBmc1yVar+NK5LbPqQd+HJicZ66R8UjFRueBK3DZC9MrF2NdbRo7c2PsAn1U1GL0FhIe2WKMIfVtgtFWipVR3ch8tT6Xq9Wjjor6z81RFstE4Q9oReKi3Wwhqgm/MzepE1h4fSkAsiyZvtXO510gOH8+ydiTX0Z6o2YlYU2qN4Ai+KPCXe6AQeEbVwPmVnB2At2+rEXy+q9hHBFodyfbUoVb/m3p6U7Ydx0UqbVX8zbs7xmAiYTQ2ZZf/SL8aKEmElqAbhtIfIgP8AkF/EmoBnpAMAAAAASUVORK5CYII=" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.linkedin.com/in/matthewkarpe/" target="_blank" aria-label="LinkedIn">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAACgklEQVR4nL3WO4xNURQG4O/cO5gYj8IzRIVGpZCQ6JQqiVIoJESiUBIqiUcUiFBpRKJQoEI0xKvxiEQmoUFIFF6RSDxG3LlXsdd2zlznTmbMjJXs7Jz9+P+11l5rnVUYKU1TI8N1i8UUkY3ALipzBxuxDwsmiegDjuF65uhDA+0gu4wzeBHrnX8kKgJzZWBuDtIG5bvdx/F/JBhNTgQ2NBuVjfl4Hgr011zsG+foD6xngY0wMaSNaVJE/cJuybW3sRqt2GuNYwwHZruOsFC6dxMOYz/u4hJmV86NRzrVO40eh+bGwTt4iGVKF1XdVnSt9cL7I31d362YzwfJXXyTouxjD4zupG7WrPUkzKYvlh77An4G6VJswIBk/TtcxTqswg/cw5teZHWE+XszTuEJZuFgjKOhyHSswCvMCIU6mINzOKCHe7sJswzgQWg/C4MB9hBr48xbKZj2K124AVfC2kN1wL0euaMMknkxt8OanKfr8RRnsTOwbmEL9mBRHcdoUdUJzbP2RWVtKIBPS+49LLm7gZv4FNbme2MirJN8uT+s2IGt2IbtkvuHYiydDMIs/dI7D0qVZBAzY2TJ8TEphPluUyqDY0r6iRJS/r7G/BsbjbCQNM/1tVNZ65VO1ZI3LsJCyqUW3sfcqKx9UpbBLC2p+rTiXC1pVdNqVf8uJf0jKTgW46uU9I+lVJitTJlhKUKfxt01uFhR/o/Lq4QNKZybuBYgA7H3Osi/BFGupe8C47OUGkvi/HncCKwhXZ6sthgn6twwQTkpFXVo9inNPSI1PG289Le720b2rbnq5KdoGvluLSzHLulnAJ26NnEvFk7Qqix/tYnVzf/aCGeZ8lb/Nxa7nn3Xb0SwAAAAAElFTkSuQmCC" alt="LinkedIn" class="social-icon">
+          </a>
+        </div>
+      </div>
+    </div>
+
   </main>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const toggleBtn=document.getElementById('menuToggle');
-    const siteNav=document.getElementById('site-nav');
-    toggleBtn?.addEventListener('click',()=>{const open=siteNav.classList.toggle('open');toggleBtn.setAttribute('aria-expanded',String(open));});
-    const template=`To: info@karpeassist.com\nSubject: KarpeAssist - New task\n\nHi Matthew,\n\nTask summary: _____\nFiles or links: _____\nDeadline (when you’d like this back): _____\nAny rules or formatting notes: _____\n\nThanks!`;
-    function copyTemplate(){
-      if(navigator.clipboard){navigator.clipboard.writeText(template).then(()=>alert('Template copied. Paste into Gmail or Outlook web.'))}
-      else{const ta=document.createElement('textarea');ta.value=template;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);alert('Template copied. Paste into Gmail or Outlook web.')}
+
+    const template =
+`To: info@karpeassist.com
+Subject: KarpeAssist - New task
+
+Hi Matthew,
+
+Task summary: _____
+Files or links: _____
+Deadline (when you’d like this back): _____
+Any rules or formatting notes: _____
+
+Thanks!`;
+
+    function copyTemplate() {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(template).then(()=>{
+          alert('Template copied. Paste into Gmail or Outlook web.');
+        }).catch(()=>{
+          fallbackCopy();
+        });
+      } else {
+        fallbackCopy();
+      }
     }
-    document.getElementById('copyTemplateBtn2')?.addEventListener('click',copyTemplate);
+    function fallbackCopy(){
+      const ta = document.createElement('textarea');
+      ta.value = template;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      alert('Template copied. Paste into Gmail or Outlook web.');
+    }
+    document.getElementById('copyTemplateBtn')?.addEventListener('click', copyTemplate);
+    document.getElementById('copyTemplateBtn2')?.addEventListener('click', copyTemplate);
   </script>
+
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "KarpeAssist",
-    "url": "https://karpeassist.com/",
-    "email": "info@karpeassist.com",
-    "areaServed": { "@type": "City", "name": "Raleigh" },
-    "description": "Affordable remote admin support, data entry, and HIPAA-aware tech help. $30/hr with fast evening turnaround. Serving Raleigh and remote clients.",
-    "paymentAccepted": ["Card", "ACH", "PayPal"],
-    "priceRange": "$$",
-    "openingHoursSpecification": [{
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "KarpeAssist",
+  "url": "https://karpeassist.com/",
+  "email": "info@karpeassist.com",
+  "areaServed": { "@type": "City", "name": "Raleigh" },
+  "description": "Affordable remote admin support, data entry, and HIPAA-aware tech help. $30/hr with fast evening turnaround. Serving Raleigh and remote clients.",
+  "paymentAccepted": ["Card", "ACH", "PayPal"],
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
-      "opens": "18:00","closes": "02:00"
-    }],
-    "contactPoint": [{
+      "opens": "18:00",
+      "closes": "02:00"
+
+    }
+  ],
+  "contactPoint": [
+    {
       "@type": "ContactPoint",
       "email": "info@karpeassist.com",
       "contactType": "customer support",
       "areaServed": "US",
       "availableLanguage": "English"
-    }],
-    "sameAs": ["https://www.voices.com/profile/matthewkarpevo"]
-  }
+    }
+  ],
+  "sameAs": ["https://www.voices.com/profile/matthewkarpevo"]
+}
   </script>
 </body>
 </html>
