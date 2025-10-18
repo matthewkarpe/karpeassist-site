@@ -148,38 +148,49 @@
 #services-note-card { border-radius: 12px; }
 </style>
 </meta></meta></meta></meta></meta></meta><style>
-/* === Mobile dropdown as a card panel === */
+/* === Mobile dropdown as a compact card anchored to hamburger === */
 @media (max-width: 900px){
+  .container.nav { position: relative; }
   nav#site-nav{
-    position:absolute; left:16px; right:16px; top:64px;
-    display:none; flex-direction:column; gap:6px; padding:12px;
-    background:var(--surface); border:1px solid var(--line);
-    border-radius:var(--radius); box-shadow:var(--shadow); z-index:2000;
+    position:absolute;
+    top:64px;
+    right:16px;
+    left:auto;
+    width: clamp(260px, 82vw, 420px);
+    display:none;
+    flex-direction:column;
+    gap:6px;
+    padding:12px;
+    background: var(--surface);
+    border:1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    z-index: 2000;
   }
   nav#site-nav.open{ display:flex !important; }
   nav#site-nav a{ padding:10px 12px; border-radius:10px; }
-  nav#site-nav a:hover, nav#site-nav a:focus{ background:var(--panel); }
+  nav#site-nav a:hover, nav#site-nav a:focus{ background: var(--panel); }
 }
 
-/* === Keep the three service cards visually separate on mobile === */
+/* === Keep three service cards separate on mobile === */
 @media (max-width: 900px){
   #services .grid{ display:grid; grid-template-columns:1fr; gap:16px; }
   #services .grid .card{
     border:1px solid var(--line);
-    box-shadow:var(--shadow);
-    border-radius:var(--radius);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
   }
 }
 
-/* === Align the services note width with the cards === */
+/* === Align services note width with cards === */
 #services .grid + #services-note-card{
-  background:var(--surface);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  padding:14px 16px;
-  margin-top:14px;
-  box-sizing:border-box;
-  max-width:100%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-top: 14px;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 </style></head>
 <body>
@@ -255,7 +266,7 @@
 </details><details><summary>Is this remote only?</summary><p>Yes, remote only. No in-person errands or printer setup.</p></details></div></section>
 <!-- Contact -->
 <section id="contact"><div class="container"><div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap"><div><h2 style="margin:0 0 6px">Get started</h2><p class="muted" style="margin:0">Evening ops (Sun–Thu). Tasks sent by <strong>7 PM ET</strong> get a reply (Yes/No) by <strong>8 PM ET</strong>.</p></div><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center"><a class="btn primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info@karpeassist.com&amp;su=KarpeAssist%20-%20First%20session%20request&amp;body=Hi%20Matthew,%0A%0ATask(s):%20_____%0ADeadline%20or%20evening:%20_____%0AFiles%20or%20links:%20_____%0AAny%20rules%20or%20format%20notes:%20_____%0A%0AThanks!" rel="noopener" target="_blank">Email via Gmail</a><a class="btn" href="https://outlook.live.com/mail/0/deeplink/compose?to=info@karpeassist.com&amp;subject=KarpeAssist%20-%20First%20session%20request&amp;body=Hi%20Matthew,%0A%0ATask(s):%20_____%0ADeadline%20or%20evening:%20_____%0AFiles%20or%20links:%20_____%0AAny%20rules%20or%20format%20notes:%20_____%0A%0AThanks!" rel="noopener" target="_blank">Email via Outlook</a><a class="btn" href="https://compose.mail.yahoo.com/?to=info@karpeassist.com&amp;subject=KarpeAssist%20-%20First%20session%20request&amp;body=Hi%20Matthew,%0A%0ATask(s):%20_____%0ADeadline%20or%20evening:%20_____%0AFiles%20or%20links:%20_____%0AAny%20rules%20or%20format%20notes:%20_____%0A%0AThanks!" rel="noopener" target="_blank">Email via Yahoo</a><button class="btn" id="copyTemplateBtn2" type="button">Copy task template</button><span class="inline-help">or email <strong>info@karpeassist.com</strong></span></div></div></div></section>
-<div class="container foot"><p>© <span id="year"></span> KarpeAssist · Remote only · <a href="mailto:info@karpeassist.com">info@karpeassist.com</a></p><p class="muted">Last updated: Oct 18, 2025</p><div class="social-links"><p class="muted" style="margin:0 0 6px;">Connect with me:</p><div style="display:flex;gap:14px;justify-content:center"><a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61580942609816" target="_blank"><img alt="Facebook" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"/></a><a aria-label="LinkedIn" href="https://www.linkedin.com/in/matthewkarpe/" target="_blank"><img alt="LinkedIn" src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"/></a></div></div></div>
+<div class="container foot"><p>© <span id="year"></span> KarpeAssist · Remote only · <a href="mailto:info@karpeassist.com">info@karpeassist.com</a></p><p class="muted">Last updated: Oct 15, 2025</p><div class="social-links"><p class="muted" style="margin:0 0 6px;">Connect with me:</p><div style="display:flex;gap:14px;justify-content:center"><a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61580942609816" target="_blank"><img alt="Facebook" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"/></a><a aria-label="LinkedIn" href="https://www.linkedin.com/in/matthewkarpe/" target="_blank"><img alt="LinkedIn" src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg"/></a></div></div></div>
 </main>
 <script type="application/ld+json">
 {
@@ -295,36 +306,24 @@
   function ready(fn){ if(document.readyState!=='loading'){ fn(); } else { document.addEventListener('DOMContentLoaded', fn, {once:true}); } }
 
   ready(function(){
-    // ===== YEAR STAMP =====
-    var yearEl = document.getElementById('year');
-    if (yearEl) { try{ yearEl.textContent = new Date().getFullYear(); }catch(_){} }
+    // YEAR
+    var y = document.getElementById('year'); if (y) try{ y.textContent = new Date().getFullYear(); }catch(_){}
 
-    // ===== DROPDOWN (MENU) =====
+    // MENU
     var toggleBtn = document.getElementById('menuToggle');
     var siteNav  = document.getElementById('site-nav');
-
     if (toggleBtn && siteNav){
       function openMenu(){ siteNav.classList.add('open'); toggleBtn.setAttribute('aria-expanded','true'); }
       function closeMenu(){ siteNav.classList.remove('open'); toggleBtn.setAttribute('aria-expanded','false'); }
       function onToggle(e){ e.stopPropagation(); siteNav.classList.contains('open') ? closeMenu() : openMenu(); }
-
       toggleBtn.addEventListener('click', onToggle, false);
       toggleBtn.addEventListener('touchstart', onToggle, {passive:true});
-
-      document.addEventListener('click', function(e){
-        if (!siteNav.contains(e.target) && e.target !== toggleBtn) closeMenu();
-      }, false);
-
-      document.addEventListener('keydown', function(e){
-        if (e.key === 'Escape'){ closeMenu(); try{ toggleBtn.focus(); }catch(_){} }
-      }, false);
-
-      // Close when a link inside the menu is clicked
-      var links = siteNav.getElementsByTagName('a');
-      for (var i=0;i<links.length;i++){ links[i].addEventListener('click', closeMenu, false); }
+      document.addEventListener('click', function(e){ if(!siteNav.contains(e.target) && e.target!==toggleBtn) closeMenu(); }, false);
+      document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeMenu(); try{ toggleBtn.focus(); }catch(_){ } } }, false);
+      Array.prototype.forEach.call(siteNav.getElementsByTagName('a'), function(a){ a.addEventListener('click', closeMenu, false); });
     }
 
-    // ===== COPY TEMPLATE (body-only) =====
+    // COPY
     var copyBtn = document.getElementById('copyTemplateBtn2');
     var template = [
       'Task summary: _____',
@@ -334,22 +333,15 @@
     ].join('\n');
 
     function writeClipboard(text){
-      // Clipboard API only works in secure contexts (https) or localhost
-      if (navigator.clipboard && (location.protocol === 'https:' || location.hostname === 'localhost')){
+      if (navigator.clipboard && (location.protocol==='https:' || location.hostname==='localhost')){
         return navigator.clipboard.writeText(text);
       }
-      // Fallback for http/file contexts
       return new Promise(function(resolve, reject){
         try{
           var ta = document.createElement('textarea');
-          ta.value = text;
-          ta.setAttribute('readonly','');
-          ta.style.position = 'fixed';
-          ta.style.top = '-1000px';
-          document.body.appendChild(ta);
-          ta.select();
-          var ok = document.execCommand('copy');
-          document.body.removeChild(ta);
+          ta.value = text; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.top='-1000px';
+          document.body.appendChild(ta); ta.select();
+          var ok = document.execCommand('copy'); document.body.removeChild(ta);
           ok ? resolve() : reject(new Error('execCommand failed'));
         }catch(e){ reject(e); }
       });
@@ -363,18 +355,16 @@
       var ta = wrap.querySelector('#copyTxt'); ta.value = text; ta.focus(); ta.select();
       wrap.addEventListener('click', function(e){ if(e.target===wrap){ document.body.removeChild(wrap); } });
       wrap.querySelector('#copyClose').onclick = function(){ document.body.removeChild(wrap); };
-      document.addEventListener('keydown', function esc(e){ if(e.key==='Escape'){ try{ document.body.removeChild(wrap);}catch(_){} document.removeEventListener('keydown', esc); } });
+      document.addEventListener('keydown', function esc(e){ if(e.key==='Escape'){ try{ document.body.removeChild(wrap);}catch(_){ } document.removeEventListener('keydown', esc); } });
     }
 
     function handleCopy(){
       writeClipboard(template.trim()).then(function(){
         if (copyBtn){
-          var prev = copyBtn.textContent; copyBtn.textContent = 'Copied!'; copyBtn.disabled = true;
-          setTimeout(function(){ copyBtn.textContent = prev; copyBtn.disabled = false; }, 1100);
+          var prev=copyBtn.textContent; copyBtn.textContent='Copied!'; copyBtn.disabled=true;
+          setTimeout(function(){ copyBtn.textContent=prev; copyBtn.disabled=false; }, 1100);
         }
-      }).catch(function(){
-        openManualModal(template.trim());
-      });
+      }).catch(function(){ openManualModal(template.trim()); });
     }
 
     if (copyBtn){
