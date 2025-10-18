@@ -153,7 +153,10 @@
       nav#site-nav.open{display:flex}
       .nav{gap:10px}}
     @media (min-width:901px){.menu-toggle{display:none}}
-  </style>
+  
+#backdrop{display:none;position:fixed;left:0;right:0;top:64px;bottom:0;background:rgba(0,0,0,0.4);z-index:900}
+body.menu-open #backdrop{display:block}
+</style>
 </head>
 <body>
   <header>
@@ -181,6 +184,7 @@
       </nav>
     </div>
   </header>
+<div id="backdrop"></div>
   <main id="main">
     <section class="hero">
       <div class="container wrap">
@@ -260,37 +264,54 @@
 }
 </script>
 <script>
-document.getElementById('year')?.textContent = new Date().getFullYear();
-const toggleBtn = document.getElementById('menuToggle');
-const siteNav = document.getElementById('site-nav');
-toggleBtn?.addEventListener('click', () => {
-  const open = siteNav.classList.toggle('open');
-  toggleBtn.setAttribute('aria-expanded', String(open));
-});
-const template = `To: info@karpeassist.com
-Subject: KarpeAssist - New task
-
-Hi Matthew,
-
-Task summary: _____
-Files or links: _____
-Deadline (when you’d like this back): _____
-Any rules or formatting notes: _____
-
-Thanks!`;
-function copyTemplate(){
-  if(navigator.clipboard){
-    navigator.clipboard.writeText(template).then(()=>alert('Template copied. Paste into Gmail or Outlook web.'));
+var y=document.getElementById('year'); if(y){ y.textContent = new Date().getFullYear(); }
+var toggleBtn = document.getElementById('menuToggle');
+var siteNav = document.getElementById('site-nav');
+var backdrop = document.getElementById('backdrop');
+function setMenu(open){
+  if(open){
+    if(siteNav){ siteNav.classList.add('open'); }
+    document.body.classList.add('menu-open');
+    if(toggleBtn){ toggleBtn.setAttribute('aria-expanded','true'); }
   }else{
-    const ta=document.createElement('textarea');ta.value=template;document.body.appendChild(ta);
-    ta.select();document.execCommand('copy');document.body.removeChild(ta);
+    if(siteNav){ siteNav.classList.remove('open'); }
+    document.body.classList.remove('menu-open');
+    if(toggleBtn){ toggleBtn.setAttribute('aria-expanded','false'); }
+  }
+}
+if(toggleBtn){
+  toggleBtn.addEventListener('click', function(){
+    var isOpen = document.body.classList.contains('menu-open');
+    setMenu(!isOpen);
+  });
+}
+if(backdrop){
+  backdrop.addEventListener('click', function(){ setMenu(false); });
+}
+// Close on ESC
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){ setMenu(false); }
+});
+// Defensive: if window resized above breakpoint, ensure menu is closed (prevents stuck state)
+window.addEventListener('resize', function(){
+  if(window.innerWidth > 900){ setMenu(false); }
+});
+// Copy template init (preserve your function if present)
+var _btn2=document.getElementById('copyTemplateBtn2');
+function copyTemplate(){
+  var template = 'To: info@karpeassist.com\nSubject: KarpeAssist - New task\n\nHi Matthew,\n\nTask summary: _____\nFiles or links: _____\nDeadline (when you’d like this back): _____\nAny rules or formatting notes: _____\n\nThanks!';
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(template).then(function(){ alert('Template copied. Paste into Gmail or Outlook web.'); });
+  }else{
+    var ta=document.createElement('textarea'); ta.value=template; document.body.appendChild(ta);
+    ta.select(); try{ document.execCommand('copy'); }catch(e){}
+    document.body.removeChild(ta);
     alert('Template copied. Paste into Gmail or Outlook web.');
   }
 }
-document.getElementById('copyTemplateBtn2')?.addEventListener('click', copyTemplate);
+if(_btn2){ _btn2.addEventListener('click', copyTemplate); }
 </script>
 
 </body>
 </html>
-
 
