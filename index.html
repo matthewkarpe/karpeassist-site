@@ -185,6 +185,29 @@
       max-width: 100%;
     }
   </style>
+<style>
+/* Quick feedback for Copy button */
+#copyTemplateBtn2[data-copy-status="Copied"]::after {
+  content: " ✓ Copied!";
+  margin-left: 6px;
+  color: var(--accent2);
+  font-weight: 600;
+  animation: fadeOut 2s ease forwards;
+}
+#copyTemplateBtn2[data-copy-status="Copy failed"]::after {
+  content: " ✗ Copy failed";
+  margin-left: 6px;
+  color: #f87171;
+  font-weight: 600;
+  animation: fadeOut 2s ease forwards;
+}
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+</style>
+
 </head>
 <body>
 <header>
@@ -357,7 +380,7 @@
 
   <div class="container foot">
     <p>© <span id="year"></span> KarpeAssist · Remote only · <a class="email-obf-link" href="#">[email protected]</a></p>
-    <p class="muted">Last updated: Oct 18, 2025</p>
+    <p class="muted">Last updated: Oct 25, 2025</p>
     <div class="social-links">
       <p class="muted" style="margin:0 0 6px;">Connect with me:</p>
       <div style="display:flex;gap:14px;justify-content:center">
